@@ -50,7 +50,7 @@ var listPathsFromRegex = function(dirname, regex) {
 
 		for(var i=0; i<content.length; ++i) {
 			if(content[i].match(regex)) {
-				paths.push(content[i]);
+				paths.push(path.join(dirname, content[i]));
 			}
 		}
 		return paths;
